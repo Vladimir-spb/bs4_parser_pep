@@ -160,7 +160,7 @@ def pep(session):
             )
         pep_count += 1
         status_count[status] += 1
-    result.extend([(status, status_count[status]) for status in status_count])
+    result.extend(status_count.items())
     result.append(('Total', pep_count))
     return result
 
